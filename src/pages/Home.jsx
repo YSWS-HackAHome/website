@@ -246,9 +246,9 @@ function Hero() {
                 </div>
 
                 <div className="hero-stats">
-                    <CountStat target={2} label="Builders Joining" />
+                    <CountStat target={10+} label="Builders Joining" />
                     <CountStat target={0} label="Projects submitted" />
-                    <CountStat target={3} label="Week Program" />
+                    {/* <CountStat target={3} label="Week Program" /> - we dont know yet ¯\_(ツ)_/¯ */}
                 </div>
             </div>
 
