@@ -403,7 +403,7 @@ async def get_orders(current_user: Dict = Depends(get_current_user)):
 @app.get('/api/login')
 async def login(request: Request):
     return await oauth.hackclub.authorize_redirect(
-        request, "https://hackahome.nullbyte.rip/api/oauth/callback"
+        request, "http://10.9.0.231:8000/api/oauth/callback"
     )
 
 @app.get('/api/oauth/callback')
