@@ -1,8 +1,11 @@
 fastapi
 uvicorn[standard]
 httpx
-python-dotenv
-authlib
 asyncpg
-pydantic
+python-dotenv
+pydantic[email]
+starlette
+authlib
+itsdangerous
+GitPython
 python-multipart
