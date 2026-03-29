@@ -190,10 +190,14 @@ export default function Projects() {
             if (!response.ok) {
                 const errorData = await response.json();
                 if (errorData.detail) {
-                    const apiErrors = {};
-                    errorData.detail.forEach(err => { if (err.loc.includes('github')) apiErrors.github = true; });
-                    setProjectErrors(prev => ({ ...prev, ...apiErrors }));
-                    throw new Error('Validation failed');
+                    if (Array.isArray(errorData.detail)) {
+                        const apiErrors = {};
+                        errorData.detail.forEach(err => { if (err.loc && err.loc.includes('github')) apiErrors.github = true; });
+                        setProjectErrors(prev => ({ ...prev, ...apiErrors }));
+                        throw new Error('Validation failed');
+                    } else {
+                        throw new Error(errorData.detail);
+                    }
                 }
                 throw new Error('Failed to create project');
             }
@@ -221,10 +225,14 @@ export default function Projects() {
             if (!response.ok) {
                 const errorData = await response.json();
                 if (errorData.detail) {
-                    const apiErrors = {};
-                    errorData.detail.forEach(err => { if (err.loc.includes('github')) apiErrors.github = true; });
-                    setProjectErrors(prev => ({ ...prev, ...apiErrors }));
-                    throw new Error('Validation failed');
+                    if (Array.isArray(errorData.detail)) {
+                        const apiErrors = {};
+                        errorData.detail.forEach(err => { if (err.loc && err.loc.includes('github')) apiErrors.github = true; });
+                        setProjectErrors(prev => ({ ...prev, ...apiErrors }));
+                        throw new Error('Validation failed');
+                    } else {
+                        throw new Error(errorData.detail);
+                    }
                 }
                 throw new Error('Failed to update project');
             }
