@@ -1,0 +1,167 @@
+/* ─── FONTS ────────────────────────────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:ital,wght@0,400;0,500;1,400&family=Instrument+Serif:ital@0;1&display=swap');
+@import "tailwindcss";
+
+/* ─── COLORS & VARS ────────────────────────────────────────── */
+:root {
+    --bg-color: #F5F0E8;
+    --text-main: #1A1410;
+    --text-muted: #6B5B4E;
+    --accent-orange: #FF5C1A;
+    --accent-lime: #C8F135;
+    --accent-dark: #C43B00;
+
+    /* Brutalist Additions */
+    --brutal-border: 3px solid var(--text-main);
+    --brutal-shadow: 6px 6px 0px var(--text-main);
+    --brutal-shadow-sm: 3px 3px 0px var(--text-main);
+}
+
+/* ─── RESET & BASE ─────────────────────────────────────────── */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--text-main);
+    font-family: 'DM Mono', monospace;
+    overflow-x: hidden;
+    cursor: none;
+    /* Custom cursor handling */
+}
+
+@media (pointer: coarse) {
+    body {
+        cursor: auto !important;
+    }
+}
+
+/* ─── BACKGROUND NOISE ─────────────────────────────────────── */
+body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 1000;
+    opacity: 0.35;
+}
+
+/* ─── BRUTALIST COMPONENTS ────────────────────────────────── */
+.brutal-card {
+    background: #fff;
+    border: var(--brutal-border);
+    box-shadow: var(--brutal-shadow);
+    padding: 2rem;
+    transition: transform 0.2s;
+}
+
+.brutal-input {
+    width: 100%;
+    padding: 1rem;
+    border: var(--brutal-border);
+    font-family: 'DM Mono', monospace;
+    font-weight: 500;
+    background: #fff;
+    margin-bottom: 1rem;
+    cursor: none;
+    transition: all 0.1s ease;
+}
+
+.brutal-input:focus {
+    background: var(--text-main);
+    color: #fff;
+    outline: none;
+}
+
+.brutal-input::placeholder {
+    color: var(--text-muted);
+    opacity: 0.5;
+}
+
+.brutal-badge {
+    display: inline-flex;
+    padding: 0.4rem 0.8rem;
+    border: 2px solid var(--text-main);
+    font-size: 0.7rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    background: #fff;
+    box-shadow: 2px 2px 0 var(--text-main);
+}
+
+/* ─── BUTTONS (RECODED FOR CURSOR VISIBILITY) ──────────────── */
+.btn-primary {
+    /* Base State: Stark White with Black Border */
+    background: #FFFFFF !important;
+    color: var(--text-main) !important;
+    border: var(--brutal-border) !important;
+    box-shadow: var(--brutal-shadow-sm) !important;
+
+    padding: 1rem 2rem;
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: none;
+    transition: all 0.1s ease-in-out;
+}
+
+.btn-primary:hover:not(:disabled) {
+    /* Hover State: Invert to Black */
+    background: var(--text-main) !important;
+    color: #FFFFFF !important;
+    transform: translate(-3px, -3px);
+    box-shadow: 7px 7px 0px var(--accent-orange) !important;
+    /* Orange shadow for pop without masking cursor */
+}
+
+.btn-primary:active:not(:disabled) {
+    transform: translate(2px, 2px);
+    box-shadow: 0px 0px 0 var(--text-main) !important;
+}
+
+/* Disabled State: Flat Gray */
+.btn-primary:disabled {
+    background: #D1CDC7 !important;
+    color: #8E8A85 !important;
+    border-color: #8E8A85 !important;
+    box-shadow: none !important;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.btn-ghost {
+    background: none;
+    border: 2px solid var(--text-main);
+    color: var(--text-main);
+    padding: 0.95rem 1.75rem;
+    font-family: 'Syne', sans-serif;
+    font-weight: 600;
+    transition: all 0.2s;
+    cursor: none;
+}
+
+.btn-ghost:hover {
+    background: #fff;
+    box-shadow: var(--brutal-shadow-sm);
+}
+
+/* ─── UTILITIES ────────────────────────────────────────────── */
+.nav-item-hover:not(.active):hover {
+    background: rgba(26, 20, 16, 0.05) !important;
+    transform: translateX(4px);
+}
