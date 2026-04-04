@@ -27,8 +27,6 @@ export default function Shop() {
         return () => window.removeEventListener('resize', handleResize);
     }, []);
 
-    // ... (Keep existing fetchShopData, useEffect for cart, calculateTotal, etc. unchanged)
-
     useEffect(() => {
         const fetchShopData = async () => {
             try {
@@ -161,7 +159,7 @@ export default function Shop() {
                             {permanentItems.map(item => (
                                 <div key={item.id} style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.9rem' }}>
                                     <span>{item.name}</span>
-                                    <span style={{ fontWeight: 800 }}>${(item.price * item.quantity).toFixed(2)}</span>
+                                    <span style={{ fontWeight: 800 }}>⚡{(item.price * item.quantity).toFixed(2)}</span>
                                 </div>
                             ))}
                         </div>
@@ -195,7 +193,7 @@ export default function Shop() {
                                         <div style={{ flexGrow: 1 }}>
                                             <span className="brutal-badge" style={{ fontSize: '0.7rem' }}>{product.category || 'General'}</span>
                                             <h3 style={{ fontFamily: 'Syne, sans-serif', fontSize: '1.2rem', margin: '0.5rem 0' }}>{product.name}</h3>
-                                            <p style={{ fontWeight: 800 }}>${product.price.toFixed(2)}</p>
+                                            <p style={{ fontWeight: 800 }}>⚡{product.price.toFixed(2)}</p>
                                         </div>
 
                                         <button
@@ -225,9 +223,9 @@ export default function Shop() {
                         flexDirection: isMobile ? 'column' : 'row',
                         gap: '0.5rem'
                     }}>
-                        <span>BALANCE: ${account.balance.toFixed(2)}</span>
+                        <span>BALANCE: ⚡{account.balance.toFixed(2)}</span>
                         {!isMobile && <span> | </span>}
-                        <span>REMAINING: ${remainingBalance.toFixed(2)}</span>
+                        <span>REMAINING: ⚡{remainingBalance.toFixed(2)}</span>
                     </div>
 
                     {cart.length === 0 ? (
@@ -249,7 +247,7 @@ export default function Shop() {
                                         </div>
                                         <div>
                                             <div style={{ fontWeight: 800, fontSize: '0.9rem' }}>{item.name}</div>
-                                            <div style={{ fontSize: '0.75rem' }}>${item.price.toFixed(2)}</div>
+                                            <div style={{ fontSize: '0.75rem' }}>⚡{item.price.toFixed(2)}</div>
                                         </div>
                                     </div>
 
@@ -276,7 +274,7 @@ export default function Shop() {
                             <div style={{ marginTop: '2rem' }}>
                                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                                     <span style={{ fontWeight: 800 }}>TOTAL</span>
-                                    <span style={{ fontSize: '1.5rem', fontWeight: 800 }}>${total.toFixed(2)}</span>
+                                    <span style={{ fontSize: '1.5rem', fontWeight: 800 }}>⚡{total.toFixed(2)}</span>
                                 </div>
                                 <button
                                     className="btn-primary"
