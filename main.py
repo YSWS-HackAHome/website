@@ -109,7 +109,14 @@ PRODUCTS = [
         'price': 120,
         'category': 'Components',
         'thumb': 'https://m.media-amazon.com/images/I/61Zf4f3fZUL._AC_SL1500_.jpg'
-    }
+    },
+    {
+        'id': 'p12',
+        'name': 'Hack Club Sticker Pack',
+        'price': 20,
+        'category': 'Swag',
+        'thumb': 'https://flavortown.hackclub.com/rails/active_storage/representations/proxy/eyJfcmFpbHMiOnsiZGF0YSI6NTMyLCJwdXIiOiJibG9iX2lkIn19--00960983352d912aa3d30bbee91e810628fffb7f/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJ3ZWJwIiwiY3JvcF90b19jb250ZW50Ijp0cnVlLCJyZXNpemVfdG9fbGltaXQiOlszNjAsbnVsbF0sInNhdmVyIjp7InN0cmlwIjp0cnVlLCJxdWFsaXR5Ijo3NX19LCJwdXIiOiJ2YXJpYXRpb24ifX0=--3652e0445c35f878da6dea0437a6dc5f7e803587/pile_of_stickers.png'
+    },
 ]
 
 PERMANENT_ITEMS = [
