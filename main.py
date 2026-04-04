@@ -714,7 +714,7 @@ async def update_project(project_id: str, update: ProjectUpdate, current_user: D
                 
 @app.post('/api/projects')
 async def create_project(project: ProjectUpdate, current_user: Dict = Depends(get_current_user)):
-    # raise HTTPException(status_code=400, detail="Project creation is currently disabled for all users.")
+    raise HTTPException(status_code=400, detail="Project creation is currently disabled for all users.")
     if not project.name:
         raise HTTPException(status_code=400, detail="Project name is required")
     
