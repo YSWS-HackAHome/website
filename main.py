@@ -38,7 +38,7 @@ PRODUCTS = [
         'name': 'Home Assistant Green',
         'price': 800,
         'category': 'Computing',
-        'thumb': 'https://www.home-assistant.io/images/green/green-hero.png'
+        'thumb': 'https://image.alza.cz/products/HA23_01/HA23_01.jpg'
     },
     {
         'id': 'p2',
@@ -66,14 +66,14 @@ PRODUCTS = [
         'name': 'ESP32 Dev Board',
         'price': 180,
         'category': 'Microcontrollers',
-        'thumb': 'https://docs.espressif.com/projects/esp-idf/en/latest/esp32/_images/esp32-devkitc-v4-isometric.png'
+        'thumb': 'https://botland.cz/img/cms/23341_1_kwadrat.jpg'
     },
     {
         'id': 'p6',
         'name': 'PIR Motion Sensor',
         'price': 80,
         'category': 'Sensors',
-        'thumb': 'https://m.media-amazon.com/images/I/61Zf4f3fZUL._AC_SL1500_.jpg'
+        'thumb': 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBLzMct8jwIiqciBwqGr9ZryPV1RJf7dBL5g&s'
     },
     {
         'id': 'p7',
@@ -87,28 +87,28 @@ PRODUCTS = [
         'name': 'Ultrasonic Distance Sensor',
         'price': 70,
         'category': 'Sensors',
-        'thumb': 'https://cdn.sparkfun.com/assets/learn_tutorials/1/1/4/HC-SR04-Ultrasonic-Rangefinder.jpg'
+        'thumb': 'https://www.sparkfun.com/media/catalog/product/cache/a793f13fd3d678cea13d28206895ba0c/1/5/15569-Ultrasonic_Distance_Sensor_-_HC-SR04-01a.jpg'
     },
     {
         'id': 'p9',
         'name': 'Soldering Iron Kit',
         'price': 300,
         'category': 'Tools',
-        'thumb': 'https://m.media-amazon.com/images/I/71fZ5zqZfZL._AC_SL1500_.jpg'
+        'thumb': 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3yD5N06OW207m5Ztt9o_6F-7k_b0JFfpqEw&s'
     },
     {
         'id': 'p10',
         'name': 'Breadboard + Jumper Wire Bundle',
         'price': 60,
         'category': 'Components',
-        'thumb': 'https://m.media-amazon.com/images/I/71p0ZfZfZfL._AC_SL1500_.jpg'
+        'thumb': 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLi5Hz2CK6PBzXBuiIuEnianMptKae1xJ_hg&s'
     },
     {
         'id': 'p11',
         'name': 'RGB LED Strip (5m)',
         'price': 120,
         'category': 'Components',
-        'thumb': 'https://m.media-amazon.com/images/I/61Zf4f3fZUL._AC_SL1500_.jpg'
+        'thumb': 'https://media.hornbach.cz/hb/packshot/as.47135862.jpg?dvid=8'
     },
     {
         'id': 'p12',
