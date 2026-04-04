@@ -146,6 +146,23 @@ export default function Admin() {
         }
     };
 
+    const formatDate = (dateString: string | null | undefined): string => {
+        if (!dateString) return 'N/A';
+
+        const date = new Date(dateString);
+
+        if (isNaN(date.getTime())) {
+            console.warn('Invalid date received:', dateString);
+            return 'Invalid Date';
+        }
+
+        return date.toLocaleDateString('en-US', {
+            year: 'numeric',
+            month: 'short',
+            day: 'numeric',
+        });
+    };
+
     const handleReviewProject = async () => {
         if (!reviewModal) return;
 
@@ -290,7 +307,7 @@ export default function Admin() {
                                     <div>
                                         <h4 style={{ fontFamily: 'Syne, sans-serif', marginBottom: '0.25rem' }}>{log.title}</h4>
                                         <p style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>
-                                            Project: {log.project_name} | Date: {log.log_date || new Date(log.created_at).toLocaleDateString()} | Time: {log.time_spent}h
+                                            Project: {log.project_name} | Date: {log.log_date || formatDate(log.created_at)} | Time: {log.time_spent}h
                                         </p>
                                     </div>
                                     <span className="brutal-badge" style={{ background: '#3498db', color: '#fff' }}>
@@ -308,7 +325,7 @@ export default function Admin() {
                                     {log.content}
                                 </div>
                                 <div style={{ fontSize: '0.7rem', color: 'var(--text-muted)', marginTop: '0.5rem' }}>
-                                    Logged: {new Date(log.created_at).toLocaleString()}
+                                    Logged: {formatDate(log.created_at)}
                                 </div>
                             </div>
                         </Reveal>
@@ -451,7 +468,7 @@ export default function Admin() {
                                             <div>
                                                 <h3 style={{ fontFamily: 'Syne, sans-serif', marginBottom: '0.5rem' }}>{project.name}</h3>
                                                 <p style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>
-                                                    By: {project.user_name} | Submitted: {new Date(project.submitted_at).toLocaleString()}
+                                                    By: {project.user_name} | Submitted: {formatDate(project.submitted_at)}
                                                 </p>
                                             </div>
                                             {getStatusBadge(project.status)}
@@ -582,7 +599,7 @@ export default function Admin() {
                                             <div><strong>Email:</strong> {selectedUser.email}</div>
                                             <div><strong>Slack ID:</strong> {selectedUser.slack_id}</div>
                                             <div><strong>Balance:</strong> ${(selectedUser.balance || 0).toFixed(2)}</div>
-                                            <div><strong>Joined:</strong> {new Date(selectedUser.created_at).toLocaleDateString()}</div>
+                                            <div><strong>Joined:</strong> {formatDate(selectedUser.created_at)}</div>
                                         </div>
                                     </div>
 
@@ -599,8 +616,8 @@ export default function Admin() {
                                                         <div>
                                                             <h4 style={{ fontFamily: 'Syne, sans-serif' }}>{project.name}</h4>
                                                             <p style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>
-                                                                Created: {new Date(project.created_at).toLocaleDateString()}
-                                                                {project.submitted_at && ` | Submitted: ${new Date(project.submitted_at).toLocaleDateString()}`}
+                                                                Created: {formatDate(project.created_at)}
+                                                                {project.submitted_at && ` | Submitted: ${formatDate(project.submitted_at)}`}
                                                             </p>
                                                         </div>
                                                         {getStatusBadge(project.status)}
