@@ -38,42 +38,42 @@ PRODUCTS = [
         'name': 'Home Assistant Green',
         'price': 800,
         'category': 'Computing',
-        'thumb': 'https://www.home-assistant.io/images/green/green-hero.png'  # Official product view
+        'thumb': 'https://www.home-assistant.io/images/green/green-hero.png'
     },
     {
         'id': 'p2',
         'name': 'Raspberry Pi 4 (2GB)',
         'price': 750,
         'category': 'Computing',
-        'thumb': 'https://assets.raspberrypi.com/static/edb980577a310edd205b5372efe9bc22/3f4ea/15c25bce-9820-4787-abe8-b6a9815a94c8_4B%2BDESKTOP%2BFEATURED.jpg'
+        'thumb': 'https://assets.raspberrypi.com/static/edb980577a310edd205b5372efe9bc22/8dbcc/15c25bce-9820-4787-abe8-b6a9815a94c8_4B%2BDESKTOP%2BFEATURED.jpg'
     },
     {
         'id': 'p3',
         'name': 'Arduino Starter Kit',
         'price': 400,
         'category': 'Microcontrollers',
-        'thumb': 'https://store-usa.arduino.cc/cdn/shop/products/A000007_01_1024x1024.jpg'  # Official Arduino store
+        'thumb': 'https://store-usa.arduino.cc/cdn/shop/files/starterkit_00.front_934x700.jpg'
     },
     {
         'id': 'p4',
         'name': 'Arduino Nano',
         'price': 150,
         'category': 'Microcontrollers',
-        'thumb': 'https://store-usa.arduino.cc/cdn/shop/products/A000005_01.jpg'
+        'thumb': 'https://store-usa.arduino.cc/cdn/shop/files/A000005_03.front_934x700.jpg'
     },
     {
         'id': 'p5',
         'name': 'ESP32 Dev Board',
         'price': 180,
         'category': 'Microcontrollers',
-        'thumb': 'https://cdn.shopify.com/s/files/1/1509/1638/products/ESP32-DevKitC-32E_1024x1024.jpg'
+        'thumb': 'https://docs.espressif.com/projects/esp-idf/en/latest/esp32/_images/esp32-devkitc-v4-isometric.png'
     },
     {
         'id': 'p6',
         'name': 'PIR Motion Sensor',
         'price': 80,
         'category': 'Sensors',
-        'thumb': 'https://m.media-amazon.com/images/I/61Zf4f3fZUL._AC_SL1500_.jpg'  # HC-SR501
+        'thumb': 'https://m.media-amazon.com/images/I/61Zf4f3fZUL._AC_SL1500_.jpg'
     },
     {
         'id': 'p7',
@@ -87,36 +87,29 @@ PRODUCTS = [
         'name': 'Ultrasonic Distance Sensor',
         'price': 70,
         'category': 'Sensors',
-        'thumb': 'https://cdn.sparkfun.com/assets/learn_tutorials/1/1/4/HC-SR04-Ultrasonic-Rangefinder.jpg'  # HC-SR04
+        'thumb': 'https://cdn.sparkfun.com/assets/learn_tutorials/1/1/4/HC-SR04-Ultrasonic-Rangefinder.jpg'
     },
     {
         'id': 'p9',
         'name': 'Soldering Iron Kit',
         'price': 300,
         'category': 'Tools',
-        'thumb': 'https://m.media-amazon.com/images/I/71fZ5zqZfZL._AC_SL1500_.jpg'  # Typical comprehensive kit
+        'thumb': 'https://m.media-amazon.com/images/I/71fZ5zqZfZL._AC_SL1500_.jpg'
     },
     {
         'id': 'p10',
         'name': 'Breadboard + Jumper Wire Bundle',
         'price': 60,
         'category': 'Components',
-        'thumb': 'https://m.media-amazon.com/images/I/71p0ZfZfZfL._AC_SL1500_.jpg'  # Common bundle
+        'thumb': 'https://m.media-amazon.com/images/I/71p0ZfZfZfL._AC_SL1500_.jpg'
     },
     {
         'id': 'p11',
         'name': 'RGB LED Strip (5m)',
         'price': 120,
         'category': 'Components',
-        'thumb': 'https://m.media-amazon.com/images/I/61Zf4f3fZUL._AC_SL1500_.jpg'  # 5m RGB strip
-    },
-    {
-        'id': 'p12',
-        'name': 'Hack Club Sticker Pack',
-        'price': 20,
-        'category': 'Swag',
-        'thumb': 'https://hackclub.com/stickers/sticker-sheet.png'  # Hack Club sticker collection
-    },
+        'thumb': 'https://m.media-amazon.com/images/I/61Zf4f3fZUL._AC_SL1500_.jpg'
+    }
 ]
 
 PERMANENT_ITEMS = [
