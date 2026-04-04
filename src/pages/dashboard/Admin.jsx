@@ -146,16 +146,13 @@ export default function Admin() {
         }
     };
 
-    const formatDate = (dateString: string | null | undefined): string => {
+    const formatDate = (dateString) => {
         if (!dateString) return 'N/A';
-
         const date = new Date(dateString);
-
         if (isNaN(date.getTime())) {
             console.warn('Invalid date received:', dateString);
             return 'Invalid Date';
         }
-
         return date.toLocaleDateString('en-US', {
             year: 'numeric',
             month: 'short',
