@@ -145,7 +145,7 @@ const DashboardLayout = () => {
                                     {account.name || 'Loading...'}
                                 </p>
                                 <p style={{ margin: 0, fontSize: '0.75rem', color: '#FF5C1A', fontFamily: 'DM Mono', fontWeight: 600 }}>
-                                    ${Number(account.balance).toFixed(2)}
+                                    ⚡{Number(account.balance).toFixed(2)}
                                 </p>
                             </div>
                         )}
