@@ -33,27 +33,90 @@ ADMIN_SLACK_IDS = os.getenv("ADMIN_SLACK_IDS", "").split(",")
 ADMIN_SLACK_IDS = [sid.strip() for sid in ADMIN_SLACK_IDS if sid.strip()]
 
 PRODUCTS = [
-    # {
-    #     'id': 'p1',
-    #     'name': 'Raw Circuit Board',
-    #     'price': 120.0,
-    #     'category': 'Hardware',
-    #     'thumb': '📟'
-    # },
-    # {
-    #     'id': 'p2',
-    #     'name': 'Mono Synth Cable',
-    #     'price': 25.0,
-    #     'category': 'Audio',
-    #     'thumb': '🔌'
-    # },
-    # {
-    #     'id': 'p3',
-    #     'name': 'Neural Interface',
-    #     'price': 450.0,
-    #     'category': 'Cyberware',
-    #     'thumb': '🧠'
-    # }
+    {
+        'id': 'p1',
+        'name': 'Home Assistant Green',
+        'price': 800,
+        'category': 'Computing',
+        'thumb': '🏠'
+    },
+    {
+        'id': 'p2',
+        'name': 'Raspberry Pi 4 (2GB)',
+        'price': 750,
+        'category': 'Computing',
+        'thumb': '🍓'
+    },
+    {
+        'id': 'p3',
+        'name': 'Arduino Starter Kit',
+        'price': 400,
+        'category': 'Microcontrollers',
+        'thumb': '🔧'
+    },
+    {
+        'id': 'p4',
+        'name': 'Arduino Nano',
+        'price': 150,
+        'category': 'Microcontrollers',
+        'thumb': '⚡'
+    },
+    {
+        'id': 'p5',
+        'name': 'ESP32 Dev Board',
+        'price': 180,
+        'category': 'Microcontrollers',
+        'thumb': '📡'
+    },
+    {
+        'id': 'p6',
+        'name': 'PIR Motion Sensor',
+        'price': 80,
+        'category': 'Sensors',
+        'thumb': '👁️'
+    },
+    {
+        'id': 'p7',
+        'name': 'DHT22 Temp & Humidity Sensor',
+        'price': 90,
+        'category': 'Sensors',
+        'thumb': '🌡️'
+    },
+    {
+        'id': 'p8',
+        'name': 'Ultrasonic Distance Sensor',
+        'price': 70,
+        'category': 'Sensors',
+        'thumb': '📏'
+    },
+    {
+        'id': 'p9',
+        'name': 'Soldering Iron Kit',
+        'price': 300,
+        'category': 'Tools',
+        'thumb': '🔩'
+    },
+    {
+        'id': 'p10',
+        'name': 'Breadboard + Jumper Wire Bundle',
+        'price': 60,
+        'category': 'Components',
+        'thumb': '🧩'
+    },
+    {
+        'id': 'p11',
+        'name': 'RGB LED Strip (5m)',
+        'price': 120,
+        'category': 'Components',
+        'thumb': '💡'
+    },
+    {
+        'id': 'p12',
+        'name': 'Hack Club Sticker Pack',
+        'price': 20,
+        'category': 'Swag',
+        'thumb': '🎨'
+    },
 ]
 
 PERMANENT_ITEMS = [
